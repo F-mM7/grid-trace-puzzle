@@ -76,6 +76,10 @@ const PuzzleGrid: React.FC<PuzzleGridProps> = ({
         style={{
           gridTemplateColumns: `repeat(${gridWidth}, 1fr)`,
           gridTemplateRows: `repeat(${gridHeight}, 1fr)`,
+          touchAction: 'none',
+          WebkitTouchCallout: 'none',
+          WebkitUserSelect: 'none',
+          userSelect: 'none',
         }}
         onMouseDown={onMouseDown}
         onMouseMove={onMouseMove}

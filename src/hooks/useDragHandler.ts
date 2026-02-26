@@ -42,6 +42,11 @@ export const useDragHandler = ({ onCellsTraversed }: UseDragHandlerProps) => {
   const handleDragMove = useCallback((e: React.MouseEvent | React.TouchEvent) => {
     if (!isDragging) return;
 
+    // タッチイベントの場合、スクロールを防ぐ
+    if ('touches' in e) {
+      e.preventDefault();
+    }
+
     // 座標を取得
     let clientX: number, clientY: number;
     if ('touches' in e) {

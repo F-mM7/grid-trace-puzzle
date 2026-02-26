@@ -74,6 +74,12 @@ h1 {
   background: #333;
   padding: 2px;
   border-radius: 4px;
+  touch-action: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 /* パズルグリッド */
@@ -82,6 +88,8 @@ h1 {
   gap: 2px;
   background: #333;
   padding: 2px;
+  touch-action: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 /* グリッドセル */
@@ -91,6 +99,12 @@ h1 {
   position: relative;
   transition: background 0.2s;
   cursor: pointer;
+  touch-action: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .grid-cell.visited {
